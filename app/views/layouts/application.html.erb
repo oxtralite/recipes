@@ -8,7 +8,17 @@
 </head>
 <body>
 
+<% 
+if true
+  now = Time.now
+%>
+<%= "The time is #{formatted_time(now)}" %>
+<% end %>
+<%= now %>
+<%= render 'layouts/nav', time: now %>
+
 <%= yield %>
 
+<%= yield :footer %>
 </body>
 </html>

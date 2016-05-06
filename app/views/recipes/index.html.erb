@@ -2,7 +2,7 @@
 <ol>
   <% @recipes.each do |recipe| %>
   <li>
-    <%= recipe.name %>
+    <%= recipe.name %><%= link_to 'Edit', edit_recipe_url(recipe) %>
     <ul>
       <% recipe.ingredients.each do |ingredient| %>
         <li><%= ingredient.name %></li>
@@ -11,3 +11,7 @@
   </li>
   <% end %>
 </ol>
+
+<% content_for :footer do %>
+Copyright
+<% end %>
