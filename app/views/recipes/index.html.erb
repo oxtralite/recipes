@@ -1,0 +1,13 @@
+<h1>Howdy!</h1>
+<ol>
+  <% @recipes.each do |recipe| %>
+  <li>
+    <%= recipe.name %>
+    <ul>
+      <% recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient.name %></li>
+      <% end %>
+    </ul>
+  </li>
+  <% end %>
+</ol>
