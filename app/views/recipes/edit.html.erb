@@ -1,5 +1,6 @@
 <%= form_for @recipe, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
   Name: <%= f.text_field :name %><br/>
   Description: <%= f.text_area :short_description, size: "60x12" %><br/>
+  Ingredients: <%= f.text_area :ingredients, size: "60x12" %><br/>
   <%= f.submit "Update" %>
 <% end %>
